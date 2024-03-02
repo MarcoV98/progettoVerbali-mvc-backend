@@ -1,0 +1,30 @@
+﻿@model progettoVerbali_mvc_backend.Models.Anagrafica
+
+<h1>Conferma eliminazione</h1>
+<h3>Sei sicuro di voler eliminare l'anagrafica?</h3>
+<div>
+    <h4>Dettagli Anagrafica</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            ID Anagrafica
+        </dt>
+        <dd class="col-sm-10">
+            @Model.IDAnagrafica
+        </dd>
+        <dt class="col-sm-2">
+            Cognome
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Cognome
+        </dd>
+    </dl>
+
+    <form asp-action="Delete" asp-route-id="@Model.IDAnagrafica" method="post">
+        <div class="form-group">
+            <input type="submit" value="Elimina" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-secondary">Annulla</a>
+        </div>
+    </form>
+</div>
+

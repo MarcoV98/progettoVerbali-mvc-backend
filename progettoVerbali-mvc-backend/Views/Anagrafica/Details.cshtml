@@ -1,0 +1,32 @@
+﻿@model Anagrafica
+
+<h2>Dettagli Anagrafica</h2>
+
+<div>
+    <h2>ID: @Model.IDAnagrafica</h2>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Cognome</dt>
+        <dd class="col-sm-10">@Model.Cognome</dd>
+
+        <dt class="col-sm-2">Nome</dt>
+        <dd class="col-sm-10">@Model.Nome</dd>
+
+        <dt class="col-sm-2">Indirizzo</dt>
+        <dd class="col-sm-10">@Model.Indirizzo</dd>
+
+        <dt class="col-sm-2">Città</dt>
+        <dd class="col-sm-10">@Model.Città</dd>
+
+        <dt class="col-sm-2">CAP</dt>
+        <dd class="col-sm-10">@Model.CAP</dd>
+
+        <dt class="col-sm-2">Codice Fiscale</dt>
+        <dd class="col-sm-10">@Model.Cod_Fisc</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Torna all'elenco</a> |
+    <a asp-action="Edit" asp-route-id="@Model.IDAnagrafica">Modifica</a> |
+    <a asp-action="Delete" asp-route-id="@Model.IDAnagrafica">Elimina</a>
+</div>
